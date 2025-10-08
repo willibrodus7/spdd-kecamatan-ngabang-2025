@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Digitalisasi SPPD Kantor Camat Ngabang Tahun 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sistem Digitalisasi SPPD<br>Kantor Camat Ngabang Tahun 2025</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Input Data SPPD</h2>
+      <form id="sppdForm">
+        <div class="grid">
+          <input type="text" name="nomor_sppd" placeholder="Nomor SPPD" required />
+          <input type="text" name="nama_pegawai" placeholder="Nama Pegawai" required />
+          <input type="text" name="nip" placeholder="NIP" />
+          <input type="text" name="jabatan" placeholder="Jabatan" />
+          <input type="text" name="pangkat" placeholder="Pangkat/Golongan" />
+          <input type="text" name="tujuan" placeholder="Tempat Tujuan" required />
+          <input type="text" name="maksud" placeholder="Maksud Perjalanan" />
+          <label>Tanggal Berangkat</label>
+          <input type="date" name="tanggal_berangkat" required />
+          <label>Tanggal Kembali</label>
+          <input type="date" name="tanggal_kembali" required />
+          <input type="text" name="kendaraan" placeholder="Kendaraan" />
+          <input type="number" name="biaya_transport" placeholder="Biaya Transport" />
+          <input type="number" name="uang_harian" placeholder="Uang Harian" />
+          <input type="number" name="total_biaya" placeholder="Total Biaya" />
+          <select name="status">
+            <option value="Dalam Proses">Dalam Proses</option>
+            <option value="Selesai">Selesai</option>
+          </select>
+          <input type="text" name="petugas_input" placeholder="Petugas Input" />
+        </div>
+        <button type="submit">Simpan Data</button>
+      </form>
+      <p id="responseMsg"></p>
+    </section>
+
+    <section class="rekap-section">
+      <h2>Rekap Data SPPD</h2>
+      <table id="rekapTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nomor SPPD</th>
+            <th>Nama Pegawai</th>
+            <th>Tujuan</th>
+            <th>Tgl Berangkat</th>
+            <th>Tgl Kembali</th>
+            <th>Kendaraan</th>
+            <th>Total Biaya</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Kantor Camat Ngabang | Sistem Digitalisasi SPPD
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
