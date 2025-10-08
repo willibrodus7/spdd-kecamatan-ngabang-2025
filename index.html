@@ -7,13 +7,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Efek salju -->
+  <canvas id="snowCanvas"></canvas>
+
   <header>
-    <h1>Sistem Digitalisasi SPPD<br>Kantor Camat Ngabang Tahun 2025</h1>
+    <div class="header-content">
+      <img src="logo_kabupaten_landak.png" alt="Logo Kabupaten Landak" class="logo">
+      <div class="header-text">
+        <h1><b>PEMERINTAH KABUPATEN LANDAK</b></h1>
+        <h2><b>KECAMATAN NGABANG</b></h2>
+        <h2>TAHUN 2025</h2>
+        <h2><b>SISTEM DIGITALISASI SPPD</b></h2>
+        <p>Bagian dari transformasi digital Kecamatan Ngabang untuk meningkatkan efisiensi 
+          <p>perjalanan dinas ASN, sesuai prinsip Sistem Pemerintahan Berbasis Elektronik (SPBE) 
+            <p>Kabupaten Landak.</p>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="form-section">
-      <h2>Input Data SPPD</h2>
+    <section class="form-section glass">
+      <h3>🖋️ Input Data SPPD</h3>
       <form id="sppdForm">
         <div class="grid">
           <input type="text" name="nomor_sppd" placeholder="Nomor SPPD" required />
@@ -28,22 +42,22 @@
           <label>Tanggal Kembali</label>
           <input type="date" name="tanggal_kembali" required />
           <input type="text" name="kendaraan" placeholder="Kendaraan" />
-          <input type="number" name="biaya_transport" placeholder="Biaya Transport" />
-          <input type="number" name="uang_harian" placeholder="Uang Harian" />
-          <input type="number" name="total_biaya" placeholder="Total Biaya" />
+          <input type="number" name="biaya_transport" placeholder="Biaya Transport (Rp)" />
+          <input type="number" name="uang_harian" placeholder="Uang Harian (Rp)" />
+          <input type="number" name="total_biaya" placeholder="Total Biaya (Rp)" />
           <select name="status">
             <option value="Dalam Proses">Dalam Proses</option>
             <option value="Selesai">Selesai</option>
           </select>
           <input type="text" name="petugas_input" placeholder="Petugas Input" />
         </div>
-        <button type="submit">Simpan Data</button>
+        <button type="submit" class="btn-primary">💾 Simpan Data</button>
       </form>
       <p id="responseMsg"></p>
     </section>
 
-    <section class="rekap-section">
-      <h2>Rekap Data SPPD</h2>
+    <section class="rekap-section glass">
+      <h3> Rekap Data SPPD</h3>
       <table id="rekapTable">
         <thead>
           <tr>
@@ -64,7 +78,7 @@
   </main>
 
   <footer>
-    © 2025 Kantor Camat Ngabang | Sistem Digitalisasi SPPD
+    © 2025 Pemerintah Kabupaten Landak — Kantor Camat Ngabang
   </footer>
 
   <script src="script.js"></script>
